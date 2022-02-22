@@ -1,5 +1,5 @@
 from math import*
 
-x=sqrt(9)+2**5
-y=10+x
+x=sqrt(81)+2**6
+y=10+x**3
 print(y)

@@ -16,3 +16,8 @@ if a==1:
     print("Apzīmējumu skaidrojumi: ")
     for apzimejumi in apzimejumi:
         print(apzimejumi)    
+elif a==2:
+    temas = ['1 - dispersās sistēmas', '2 - atoma un vielas uzbūve', '3 - elektrolītiskā disociācija', '4 - oksidēšanās-reducēšanās procesi', '5 - ķīmisko procesu norise', '6 - ogļūdeņraži', '7 - spirti un aldehīdi', '8 - karbonskābes', '9 - dabasvielas', '10 - ķīmijas un vides tehnoloģijas sabiedrības ilgtspējīgā attīstībā']
+    for temas in temas:
+        print(temas)
+    b=input("Par kuru no tēmām vēlies pārbaudīt zināšanas? Ievadi skaitli!") 

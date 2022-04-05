@@ -167,4 +167,136 @@ elif a==2:
             print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija b, c, a, c, b.")
         
         veikt_testu(jautajumi)
+        
+     elif b=="6":
+        print("Tests par tēmu ogļūdeņraži.")
+        question_prompts = [
+                  "Kas ir alkāni?\na) Piesātinātie ogļūdeņraži, kuru molekulās ir tikai vienkāršās saites un kuru homologu rindas vispārīgā formula ir Cn H2n+2.\nb) Nepiesātinātie ogļūdeņraži, kuru molekulās ir viena divkāršā saite un kuru homologu rindas vispārīgā formula ir Cn H2n.\nc) Nepiesātinātie ogļūdeņraži, kuru molekulās ir viena trīskāršā saite un kuru homologu rindas vispārīgā formula ir Cn H2n–2.\n",
+                  "Kas ir alkēni?\na) Piesātinātie ogļūdeņraži, kuru molekulās ir tikai vienkāršās saites un kuru homologu rindas vispārīgā formula ir Cn H2n+2.\nb) Nepiesātinātie ogļūdeņraži, kuru molekulās ir viena trīskāršā saite un kuru homologu rindas vispārīgā formula ir Cn H2n–2.\nc) Nepiesātinātie ogļūdeņraži, kuru molekulās ir viena trīskāršā saite un kuru homologu rindas vispārīgā formula ir Cn H2n.\n ",
+                  "Kas ir arēni?\na) Ogļūdeņraži, kuru molekulās ir viens vai vairāki benzola gredzeni.\nb) Ķīmiskie savienojumi, kuru sastāvs ir vienāds, bet uzbūve un īpašības atšķiras.\nc) Alkāna atlikums, ko iegūst, no tā molekulformulas atņemot vienu ūdeņraža atomu.\n",
+                  "Kāda ir butāna formula?\na) C5H12\nb) C4H10\nc) C6H14\n",
+             ]
+        
+        jautajumi = [
+                  Jautajums(question_prompts[0], "a"),
+                  Jautajums(question_prompts[1], "c"),
+                  Jautajums(question_prompts[2], "a"),
+                  Jautajums(question_prompts[3], "b"),     
+                  
+             ]
+             
+        def veikt_testu(jautajumi):
+                rezultats = 0
+                for jautajums in jautajumi:
+                    atbilde = input(jautajums.jaut)
+                    if atbilde == jautajums.atbilde:
+                            rezultats += 1
+                print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija a, c, a, b.")
+        veikt_testu(jautajumi)        
+        
+    elif b=="7":
+        print("Tests par tēmu spirti un aldehīdi.")
+        question_prompts = [
+             "Kas ir aldehīdi?\na) Noteikta atomu grupa, kas kopīga visai ķīmisko savienojumu klasei un nosaka šīs klases savienojumu raksturīgās īpašības.\nb) Organiskie savienojumi, kuru molekulās ir funkcionālā grupa –CHO.\nc) Mijiedarbības spēki, kuru rezultātā ar stipri elektronegatīva elementa atomu saistīts ūdeņraža atoms pievelkas ar citas vai tās pašas molekulas F, O vai N atomu.\n",
+             "Kas ir spirti? \na) Ogļūdeņražu atvasinājumi, kuros viens vai vairāki ūdeņraža atomi ir aizvietoti ar hidroksilgrupu (−OH).\nb) Ķīmiskie savienojumi, kas sastāv no metāliskiem elementiem un skābju atlikumiem. \nc) Organiskie savienojumi, kuru molekulās ir funkcionālā grupa –CHO.\n ",
+             "Kas ir funkcionālā grupa?\na) Noteikta atomu grupa, kas kopīga visai ķīmisko savienojumu klasei un nosaka šīs klases savienojumu raksturīgās īpašības.\nb) Organiskie savienojumi, kuros viens vai vairāki ūdeņraža atomi aizvietoti ar hidroksilgrupām.\nc) Mijiedarbības spēki, kuru rezultātā ar stipri elektronegatīva elementa atomu saistīts ūdeņraža atoms pievelkas ar citas vai tās pašas molekulas F, O vai N atomu.\n",
+             "Kas ir ūdeņraža saite? \na) Noteikta atomu grupa, kas kopīga visai ķīmisko savienojumu klasei un nosaka šīs klases savienojumu raksturīgās īpašības.\nb) Saite starp metālu un nemetālu atomiem.\nc) Mijiedarbības spēki, kuru rezultātā ar stipri elektronegatīva elementa atomu saistīts ūdeņraža atoms pievelkas ar citas vai tās pašas molekulas F, O vai N atomu.\n",
+        ]
+        
+        jautajumi = [
+             Jautajums(question_prompts[0], "b"),
+             Jautajums(question_prompts[1], "a"),
+             Jautajums(question_prompts[2], "a"),
+             Jautajums(question_prompts[3], "c"),
+        ]
+        
+        def veikt_testu(jautajumi):
+            rezultats = 0
+            for jautajums in jautajumi:
+                atbilde = input(jautajums.jaut)
+                if atbilde == jautajums.atbilde:
+                    rezultats += 1
+            print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija b, a, a, c.")
+        
+        veikt_testu(jautajumi)
+        
+    elif b=="8":
+        print("Tests par tēmu karbonskābes un to atvasinājumi.")
+        question_prompts = [
+             "Kas ir aminoskābes?\na) Organiskie savienojumi, kuru molekulās ogļūdeņraža atlikumā viens vai vairāki ūdeņraža atomi ir aizvietoti ar aminogrupu.\nb) Ogļūdeņražu atvasinājumi, kuru molekulās ogļūdeņraža atlikums ir saistīts ar funkcionālo grupu – karboksilgrupu.\nc) Organiskas vielas, kas rodas skābju un spirtu reakcijās.\n",
+             "Kas ir ogļūdeņražu karboksilatvasinājumi? \na) Organiskie savienojumi, kuru molekulās ogļūdeņraža atlikumā viens vai vairāki ūdeņraža atomi ir aizvietoti ar aminogrupu.\nb) Ogļūdeņražu atvasinājumi, kuru molekulās ogļūdeņraža atlikums ir saistīts ar funkcionālo grupu – karboksilgrupu.\nc) Ķīmiskā reakcija, kurā skābe reaģē ar spirtu.\n ",
+             "Kā iedalās aizvietotās karbonskābes?\na) Halogēnkarbonskābes, hidroksikarbonskābes un aminoskābes.\nb) Hidroksikarbonskābes, aminoskābes un esteri.\nc) Esteri, halogēnkarbonskābes un hidroksikarbonskābes.\n",
+        ]
+        
+        jautajumi = [
+             Jautajums(question_prompts[0], "a"),
+             Jautajums(question_prompts[1], "b"),
+             Jautajums(question_prompts[2], "a"),
+             
+        ]
+        
+        def veikt_testu(jautajumi):
+            rezultats = 0
+            for jautajums in jautajumi:
+                atbilde = input(jautajums.jaut)
+                if atbilde == jautajums.atbilde:
+                    rezultats += 1
+            print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija a, b, a.")
+        
+        veikt_testu(jautajumi)
+        
+    elif b=="9":
+        print("Tests par tēmu dabasvielas.")
+        question_prompts = [
+             "Kas ir ogļhidrāti?\na) Dabiskie lielmolekulārie savienojumi – polimēri, kuru monomēri ir aminoskābes.\nb) Glicerīna (trīsvērtīgā spirta) un augstāko karbonskābju jeb taukskābju esteri (triglicerīdi).\nc) Organiski savienojumi, kurus veido ogleklis, ūdeņradis un skābeklis. Tie var būt gan monosaharīdi (monomēri), gan disaharīdi, gan polisaharīdi (polimēri).\n",
+             "Kas ir olbaltumvielas? \na) Dabiskie lielmolekulārie savienojumi – polimēri, kuru monomēri ir aminoskābes.\nb) Glicerīna (trīsvērtīgā spirta) un augstāko karbonskābju jeb taukskābju esteri (triglicerīdi).\nc) Organiski savienojumi, kurus veido ogleklis, ūdeņradis un skābeklis. Tie var būt gan monosaharīdi (monomēri), gan disaharīdi, gan polisaharīdi (polimēri).\n ",
+             "Kas ir enzīmi?\na) Dabiski katalizatori. Olbaltumvielas, kuras paātrina vielmaiņas reakcijas.\nb) Karbonskābes, kuras ietilpst tauku sastāvā.\nc) Dabiskie polimēri, kuru monomēri ir nukleotīdi.\n",
+             "Kas ir dabasvielu hidrolīze? \na) Ķīmiskā saite, kas saista aminoskābju atlikumus olbaltumvielās.\nb) Dabasvielu reakcija ar ūdeni noteiktos apstākļos, kuras rezultātā rodas katram dabiskajam polimēram raksturīgie monomēri.\nc) Olbaltumvielu telpiskās struktūras izmaiņas ārējo apstākļu ietekmē, kā rezultātā tās zaudē bioloģisko aktivitāti.\n",
+             "Kas ir nukleotīds? \na) Viela, kuras molekulas sastāv no diviem vai vairākiem aminoskābju atlikumiem, kuri savā starpā saistīti ar peptīdsaitēm. \nb) Nukleīnskābes monomērs, kas sastāv no savstarpēji kovalenti saistītas slāpekļa bāzes (adenīna, guanīna, citozīna vai timīna/uracila), ogļhidrāta (dezoksiribozes/ ribozes) un ortofosforskābes atlikuma. \nc) Organiski savienojumi, kurus veido ogleklis, ūdeņradis un skābeklis. Tie var būt gan monosaharīdi (monomēri), gan disaharīdi, gan polisaharīdi (polimēri).\n",
+        ]
+        
+        jautajumi = [
+             Jautajums(question_prompts[0], "c"),
+             Jautajums(question_prompts[1], "a"),
+             Jautajums(question_prompts[2], "a"),
+             Jautajums(question_prompts[3], "b"),
+             Jautajums(question_prompts[4], "b"),     
+        ]
+        
+        def veikt_testu(jautajumi):
+            rezultats = 0
+            for jautajums in jautajumi:
+                atbilde = input(jautajums.jaut)
+                if atbilde == jautajums.atbilde:
+                    rezultats += 1
+            print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija c, a, a, b, b.")
+        
+        veikt_testu(jautajumi) 
+        
+    elif b=="10":
+        print("Tests par tēmu ķīmijas un vides tehnoloģijas sabiedrības ilgtspējīgā attīstībā.")
+        question_prompts = [
+             "Kas ir biorafinēšana? \na) Efektīva biomasas izmantošana, ar daudzveidīgām tehnoloģijām pārvēršot to vērtīgos savienojumos, lai maksimāli aizstātu naftas pārstrādes produktus ar tādiem pašiem produktiem, iegūtiem no biomasas.\nb) Vides, ekonomiskā, sociālā attīstība, kas nodrošinašodienas vajadzību apmierināšanu, neradot draudus nākamo paaudžu vajadzību apmierināšanai.\nc) Zinātnes un tehnikas nozare, kas pētī iespējas, kā bioloģiskos procesus izmantot rūpnieciskos nolūkos,lai iegūtu cilvēkiem nepieciešamus produktus.\n",
+             "Kas nodrošina skābekļa atjaunošanos gaisā un ogļskābās gāzes saistīšanu?\na) Erozija\nb) Fotosintēze\nc) Transpirācija\n ",
+             "Kurš no šiem apgalvojumiem ir patiess?:\na) Melnajā konteinerā met bīstamos atkritumus.\nb) Zilajā konteinerā met papīru.\nc) Zaļajā konteinerā met papīru.\n",
+             "Nafta ir:\na) dažādas neorganiskās skābes.\nb) melnās silikātsmiltis.\nc) dažādu ogļūdeņražu maisījums.\n",
+        ]
+        
+        jautajumi = [
+             Jautajums(question_prompts[0], "a"),
+             Jautajums(question_prompts[1], "b"),
+             Jautajums(question_prompts[2], "b"),
+             Jautajums(question_prompts[3], "c"),
+             
+        ]
+        
+        def veikt_testu(jautajumi):
+            rezultats = 0
+            for jautajums in jautajumi:
+                atbilde = input(jautajums.jaut)
+                if atbilde == jautajums.atbilde:
+                    rezultats += 1
+            print("Tu pareizi atbildēji uz", rezultats, "no", len(jautajumi), "jautājumiem. Pareizās atbildes bija a, b, b, c.")
+        
+        veikt_testu(jautajumi)  
     
